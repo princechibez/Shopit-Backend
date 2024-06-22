@@ -1,12 +1,12 @@
 ## Live Link
 
-You can access the live application at [https://e-shopit.vercel.app/](https://e-shopit.vercel.app/).
+You can access the live application at [https://shop-bq70.onrender.com/](https://shop-bq70.onrender.com/).
 
 # MERN-E-Commerce-Backend
 
 MERN-E-Commerce-Backend is the backend of an e-commerce web application built with MongoDB, NodeJS, and ExpressJS.
 
-The frontend of the application is built with ReactJS, Material UI, React-router-dom,ContextAPI. The source code for the frontend can be found at [https://github.com/Saurabh-8585/MERN-E-Commerce-Frontend](https://github.com/Saurabh-8585/MERN-E-Commerce-Frontend).
+The frontend of the application is built with ReactJS, Material UI, React-router-dom,ContextAPI. The source code for the frontend can be found at [https://github.com/princechibez/Shopit-frontend.git](https://github.com/princechibez/Shopit-frontend.git).
 
 ## Features
 
