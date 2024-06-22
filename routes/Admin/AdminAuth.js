@@ -70,7 +70,7 @@ router.post('/register', [
     body('lastName', 'Enter a valid name').isLength({ min: 3 }),
     body('email', 'Enter a valid email').isEmail(),
     body('password', 'Password must be at least 5 characters').isLength({ min: 5 }),
-    body('phoneNumber', 'Enter a valid phone number').isLength({ min: 10, max: 10 })
+    body('phoneNumber', 'Enter a valid phone number').isLength({ min: 11, max: 11 })
 
 
 ], async (req, res) => {
