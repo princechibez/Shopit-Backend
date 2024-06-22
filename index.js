@@ -27,12 +27,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.use(express.static(path.join(__dirname, "build")));
 
 // app.use("/", (req, res) => res.send("Welcome"));
 
-app.use(checkOrigin);
+// app.use(checkOrigin);
 
 app.use("/api/auth", auth);
 
@@ -51,5 +51,5 @@ app.use("/api/admin", AdminRoute);
 // app.use('/api/password', forgotPassword)
 
 app.listen(port, () => {
-  console.log(`E-commerce backend listening at http://localhost:${port}`);
+  console.log(`E-commerce backend listening on port:${port}`);
 });
