@@ -16,8 +16,6 @@ const dotenv = require("dotenv");
 const checkOrigin = require("./middleware/apiAuth");
 dotenv.config();
 
-connectToMongo();
-
 const port = 5000;
 
 const app = express();
@@ -50,6 +48,8 @@ app.use("/api/admin", AdminRoute);
 
 // app.use('/api/password', forgotPassword)
 
-app.listen(port, () => {
-  console.log(`E-commerce backend listening on port:${port}`);
+connectToMongo(() => {
+  app.listen(port, () => {
+    console.log(`E-commerce backend listening on port:${port}`);
+  });
 });
