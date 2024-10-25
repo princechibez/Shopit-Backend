@@ -103,9 +103,9 @@ router.post(
           if (err) {
             throw err;
           }
+          res.send({ success, authToken });
         }
       );
-      res.send({ success, authToken });
     } catch (error) {
       res.status(500).send("Internal server error");
     }
@@ -156,7 +156,7 @@ router.post(
       // Send email to User after login
       transporter.sendMail(
         {
-          from: "",
+          from: "chibezprince@gmail.com",
           to: email,
           subject: "Welcome to Shopit",
           text: `Hello ${user.firstName}, welcome back to Shopit, your verification code is ${verificationCode}`,
@@ -165,9 +165,9 @@ router.post(
           if (err) {
             throw err;
           }
+          res.send({ success, authToken });
         }
       );
-      res.send({ success, authToken });
     } catch (error) {
       res.status(500).send("Internal server error002");
     }
@@ -180,7 +180,6 @@ router.get("/getuser", authUser, async (req, res) => {
     const user = await User.findById(req.user.id).select("-password");
     success = true;
     res.send(user);
-    console.log(user.city);
   } catch (error) {
     res.status(400).send("Something went wrong");
   }
